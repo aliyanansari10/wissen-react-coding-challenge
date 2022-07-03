@@ -8,6 +8,7 @@ import { store, persistor } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const options = {
   // you can also just use 'bottom center'

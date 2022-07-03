@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { render } from "react-dom";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { login } from "../redux/actions/auth";
@@ -72,7 +71,6 @@ const Login = () => {
           password,
         })
       );
-      console.log("Login API REsponse: ", res);
       if (res) {
         alert.show("Login Successfull", {
           type: "success",
@@ -113,7 +111,9 @@ const Login = () => {
             <div className="col-sm-6 col-md-8 col-lg-12">
               <form id="loginform" onSubmit={loginSubmit}>
                 <div className="form-group" style={{ paddingBottom: 20 }}>
-                  <label style={{ paddingBottom: 5 }}>Email</label>
+                  <label data-testid="email" style={{ paddingBottom: 5 }}>
+                    Email
+                  </label>
 
                   <div
                     style={{
